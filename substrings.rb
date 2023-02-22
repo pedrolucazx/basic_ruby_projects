@@ -1,8 +1,7 @@
 def substrings(word, dictionary)
-  frequencies = Hash.new(0)
   word.downcase!
+  frequencies = Hash.new(0)
   dictionary.each do |substring|
-    puts substring
     count = word.scan(substring.downcase).length
     frequencies[substring] += count if count.positive?
   end
